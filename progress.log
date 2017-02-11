@@ -1,0 +1,11 @@
+[2017-02-10 22:59:37] START
+[2017-02-10 23:04:58] EDIT app2/models/menu.py: -105
+[2017-02-10 23:07:39] CREATE db1.py: 0
+[2017-02-10 23:08:17] EDIT app2/models/db1.py: 1
+[2017-02-10 23:08:50] EDIT app2/models/db1.py: 0
+[2017-02-10 23:14:15] EDIT app2/models/db1.py: 3
+[2017-02-10 23:21:58] EDIT app2/controllers/default.py: -2
+[2017-02-10 23:22:41] EDIT app2/controllers/default.py: 0
+[2017-02-10 23:22:42] EDIT app2/controllers/default.py: 0
+[2017-02-10 23:22:55] EDIT app2/controllers/default.py: 0
+[2017-02-10 23:23:50] EDIT app2/views/default/index.html: -44
