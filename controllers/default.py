@@ -15,6 +15,16 @@ def index():
     return dict(message=T('Welcome to web2py!'))
 """
     form = SQLFORM(db.blog_post).process()
+    rows = db(db.blog_post).select()
+    return locals()
+def show():
+    post = db.blog_post(request.args(0,cast = int))
+    return locals
+
+
+@auth.requires_login()
+def create():
+    form = SQLFORM(db.blog_post).process()
     return locals()
 
 def user():

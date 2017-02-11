@@ -5,7 +5,7 @@
 # Customize your APP title, subtitle and menus here
 # ----------------------------------------------------------------------------------------------------------------------
 
-response.logo = A(B('My_first_app'), XML('&trade;&nbsp;'),
+response.logo = A(B('Blog Post'), XML('&trade;&nbsp;'),
                   _class="navbar-brand", _href="http://www.web2py.com/",
                   _id="web2py-logo")
 response.title = request.application.replace('_', ' ').title()
@@ -29,8 +29,8 @@ response.google_analytics_id = None
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.menu = [
-    (T('Home'), False, URL('default', 'index')),
-    (T('Test'), False, URL('default', 'user')),
+    (T('List'), False, URL('default', 'index')),
+    (T('Create'), False, URL('default', 'create')),
 ]
 
 

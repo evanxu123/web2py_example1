@@ -14,7 +14,17 @@ def index():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
 """
-    from = SQLFORM(db.blog_post).process()
+    form = SQLFORM(db.blog_post).process()
+    rows = db(db.blog_post).select()
+    return locals()
+def show():
+    post = db.blog_post(request.args(0,cast = int))
+    return locals
+
+
+
+def create():
+    form = SQLFORM(db.blog_post).process()
     return locals()
 
 def user():

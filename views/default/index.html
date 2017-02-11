@@ -1,5 +1,19 @@
 {{extend 'layout.html'}}
+
+
 <h2>
-  Blog Post
+Previous Posts
 </h2>
-{{=form}}
+<table class="table">
+    {{for row in rows:}}
+    <tr>
+        <td><a href="{{=URL('show',args = row.id)}}">{{=row.title}}</a></td>
+        
+        <td>{{=row.time_stamp}}</td>
+    </tr>
+    {{pass}}
+</table>
+    
+
+
+{{=rows}}
