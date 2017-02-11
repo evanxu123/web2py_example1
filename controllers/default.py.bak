@@ -20,7 +20,7 @@ def index():
 
 def show():
     post = db.blog_post(request.args(0,cast=int))
-    return locals
+    return locals()
 
 
 @auth.requires_login()
@@ -30,6 +30,10 @@ def create():
     db.blog_post.time_stamp.readable = False
     form = SQLFORM(db.blog_post).process()
     if form.accepted: redirect(URL('index'))
+    return locals()
+
+def manage():
+    grid = SQLFORM.grid(db.blog_post)
     return locals()
 
 def user():

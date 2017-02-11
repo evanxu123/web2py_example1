@@ -64,3 +64,13 @@ ALTER TABLE blog_post ADD time_stamp TIMESTAMP;
 timestamp: 2017-02-10T23:14:22.996000
 ALTER TABLE blog_post ADD title CHAR(512);
 success!
+timestamp: 2017-02-11T13:01:08.997000
+CREATE TABLE image(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title CHAR(512) UNIQUE,
+    file CHAR(512)
+);
+success!
+timestamp: 2017-02-11T13:01:09.031000
+ALTER TABLE blog_post ADD image_id INTEGER REFERENCES image (id) ON DELETE CASCADE  ;
+success!

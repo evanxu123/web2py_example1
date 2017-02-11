@@ -32,6 +32,11 @@ def create():
     if form.accepted: redirect(URL('index'))
     return locals()
 
+@auth.requires_membership('managers')
+def manage():
+    grid = SQLFORM.grid(db.blog_post)
+    return locals()
+
 def user():
     """
     exposes:

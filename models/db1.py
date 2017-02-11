@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
+db = DAL("sqlite://storage.sqlite")
+
+db.define_table('image',
+                Field('title', unique=True),
+                Field('file', 'upload'),
+                format = '%(title)s')
+
 db.define_table('blog_post',
+                Field('image_id', 'reference image'),
                 Field('title',requires=IS_NOT_EMPTY()),
                 Field('body','text',requires=IS_NOT_EMPTY()),
                 Field('time_stamp','datetime'))
+
+
+db.image.title.requires = IS_NOT_IN_DB(db, db.image.title)
+db.blog_post.image_id.requires = IS_IN_DB(db, db.image.id, '%(title)s')
+
+db.blog_post.image_id.writable = db.blog_post.image_id.readable = False
