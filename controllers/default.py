@@ -17,14 +17,19 @@ def index():
     form = SQLFORM(db.blog_post).process()
     rows = db(db.blog_post).select()
     return locals()
+
 def show():
-    post = db.blog_post(request.args(0,cast = int))
-    return locals
+    post = db.blog_post(request.args(0,cast=int))
+    return locals()
 
 
 @auth.requires_login()
 def create():
+    db.blog_post.time_stamp.default = request.now
+    db.blog_post.time_stamp.writable = False
+    db.blog_post.time_stamp.readable = False
     form = SQLFORM(db.blog_post).process()
+    if form.accepted: redirect(URL('index'))
     return locals()
 
 def user():

@@ -1,8 +1,5 @@
 {{extend 'layout.html'}}
-<h2>
- Bew Blog Post
-</h2>
-{{=form}}
+
 
 <h2>
 Previous Posts
@@ -11,12 +8,7 @@ Previous Posts
     {{for row in rows:}}
     <tr>
         <td><a href="{{=URL('show',args = row.id)}}">{{=row.title}}</a></td>
-        
         <td>{{=row.time_stamp}}</td>
     </tr>
     {{pass}}
 </table>
-    
-
-
-{{=rows}}

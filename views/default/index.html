@@ -8,12 +8,7 @@ Previous Posts
     {{for row in rows:}}
     <tr>
         <td><a href="{{=URL('show',args = row.id)}}">{{=row.title}}</a></td>
-        
         <td>{{=row.time_stamp}}</td>
     </tr>
     {{pass}}
 </table>
-    
-
-
-{{=rows}}
