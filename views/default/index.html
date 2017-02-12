@@ -8,9 +8,9 @@ Previous Posts
     {{for row in rows:}}
     <tr>
         <td><a href="{{=URL('show',args = row.id)}}">{{=row.title}}</a></td>
-        <td>{{=row.time_stamp}}</td>
-        <td>{{=row.body}}</td>
-        <td>{{=row.sold}}</td>
+        <td style="width: 200px">{{=row.time_stamp}}</td>
+        <td style="width: 600px">{{=row.body}}</td>
+        <td style="width: 50px">{{=row.sold}}</td>
         <td>
         <img class="item" ,="" width="200px" src="{{=URL('download', args=row.file)}}" />
         </td>

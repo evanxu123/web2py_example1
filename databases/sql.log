@@ -95,3 +95,5 @@ success!
 timestamp: 2017-02-11T17:01:25.725000
 ALTER TABLE blog_post ADD sold CHAR(1);
 success!
+success!
+success!

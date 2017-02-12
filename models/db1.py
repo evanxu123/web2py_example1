@@ -11,7 +11,7 @@ db.define_table('blog_post',
                 Field('title',requires=IS_NOT_EMPTY()),
                 Field('body','text',requires=IS_NOT_EMPTY()),
                 Field('price',requires=IS_NOT_EMPTY()),
-                Field('sold','boolean',requires=IS_NOT_EMPTY()),
+                Field('sold',requires=IS_NOT_EMPTY()),
                 #Field('body','text',requires=IS_NOT_EMPTY()),
                 Field('file', 'upload'),
                 Field('time_stamp','datetime'))
