@@ -73,3 +73,10 @@
 [2017-02-11 16:48:55] EDIT app2/models/db1.py: 0
 [2017-02-11 16:49:20] EDIT app2/models/db1.py: -1
 [2017-02-11 16:50:34] EDIT app2/views/default/index.html: -1
+[2017-02-11 17:00:24] EDIT app2/models/db1.py: 1
+[2017-02-11 17:00:43] EDIT app2/models/db1.py: 0
+[2017-02-11 17:01:23] EDIT app2/models/db1.py: 1
+[2017-02-11 17:07:56] EDIT app2/controllers/default.py: 0
+[2017-02-11 17:12:41] EDIT app2/models/menu.py: 1
+[2017-02-11 17:15:48] EDIT app2/views/default/index.html: 1
+[2017-02-11 17:16:12] EDIT app2/views/default/index.html: -1

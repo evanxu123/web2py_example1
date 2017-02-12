@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 db = DAL("sqlite://storage.sqlite")
 
-"""db.define_table('image',
+db.define_table('image',
                 Field('title', unique=True),
                 Field('file', 'upload'),
                 format = '%(title)s')
-"""
+
 db.define_table('blog_post',
                 Field('image_id', 'reference image'),
                 Field('title',requires=IS_NOT_EMPTY()),
                 Field('body','text',requires=IS_NOT_EMPTY()),
+                Field('price',requires=IS_NOT_EMPTY()),
                 #Field('body','text',requires=IS_NOT_EMPTY()),
                 Field('file', 'upload'),
                 Field('time_stamp','datetime'))
