@@ -26,7 +26,7 @@ def show():
 @auth.requires_login()
 def create():
     db.blog_post.time_stamp.default = request.now
-    db.blog_post.time_stamp.writable = False
+    #db.blog_post.time_stamp.writable = False
     db.blog_post.time_stamp.readable = False
     form = SQLFORM(db.blog_post).process()
     if form.accepted: redirect(URL('index'))

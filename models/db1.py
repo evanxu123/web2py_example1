@@ -10,6 +10,8 @@ db.define_table('blog_post',
                 Field('image_id', 'reference image'),
                 Field('title',requires=IS_NOT_EMPTY()),
                 Field('body','text',requires=IS_NOT_EMPTY()),
+                #Field('body','text',requires=IS_NOT_EMPTY()),
+                Field('file', 'upload'),
                 Field('time_stamp','datetime'))
 
 

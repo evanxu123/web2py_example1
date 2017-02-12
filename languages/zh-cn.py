@@ -128,6 +128,7 @@
 'export as csv file': '以CSV格式导出',
 'Export:': 'Export:',
 'FAQ': 'FAQ',
+'file': 'file',
 'First name': '名',
 'Forgot username?': '忘记用户名？',
 'Forms and Validators': 'Forms and Validators',
